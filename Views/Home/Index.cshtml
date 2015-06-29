@@ -1,0 +1,308 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section featured {
+    <section class="featured">
+        <script src="/Scripts/JQuery.js"></script>
+        <script src="/Scripts/Bootstrap.js"></script>
+        <link href="/Content/themes/base/bootstrap.css" rel="stylesheet" />
+
+    </section>
+
+}
+
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/prettyPhoto.css" rel="stylesheet">
+    <link href="~/Content/price-range.css" rel="stylesheet">
+    <link href="~/Content/animate.css" rel="stylesheet">
+	<link href="~/Content/main.css" rel="stylesheet">
+	<link href="~/Content/responsive.css" rel="stylesheet">
+    
+</head>
+    <body>
+
+        
+        
+					
+
+        <section id="slider"><!--slider-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#slider-carousel" data-slide-to="1"></li>
+							<li data-target="#slider-carousel" data-slide-to="2"></li>
+						</ol>
+						
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="col-sm-6">
+									<h1><span>C</span>asio</h1>
+									<h2>Cronograph Watches</h2>
+									<p>Search .. Select .. Buy .. Watches online </p>
+									
+								</div>
+								<div class="col-sm-6">
+									<img src="~/images/home/pricing.png"  class="pricing" alt="" />
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-sm-6">
+									<h1><span>C</span>asio</h1>
+									<h2>Digital Watches</h2>
+									<p>Search .. Select .. Buy .. Watches online </p>
+								</div>
+								<div class="col-sm-6">
+									<img src="~/images/home/digital.jpg" height="300" class="girl img-responsive" alt="" />
+									<img src="~/images/home/pricing.png"  class="pricing" alt="" />
+								</div>
+							</div>
+							
+							<div class="item">
+								<div class="col-sm-6">
+									<h1><span>C</span>asio</h1>
+									<h2>Red Bull Editions</h2>
+									<p>Search .. Select .. Buy .. Watches online </p>
+								</div>
+								<div class="col-sm-6">
+									<img src="~/images/home/RedBull.jpg" height="300" class="girl img-responsive" alt="" />
+									<img src="~/images/home/pricing.png" class="pricing" alt="" />
+								</div>
+							</div>
+							
+						</div>
+						
+						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						</a>
+						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section><!--/slider-->
+
+
+
+
+
+
+
+
+        <div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="left-sidebar">
+						
+					
+						<div class="brands_products"><!--brands_products-->
+							<h2>Brands</h2>
+							<div class="brands-name">
+								<ul class="nav nav-pills nav-stacked">
+									<li><a href="#"> <span class="pull-right"></span>Casio</a></li>
+									<li><a href="#"> <span class="pull-right"></span>Rado Erde</a></li>
+									<li><a href="#"> <span class="pull-right"></span>Gucci</a></li>
+									<li><a href="#"> <span class="pull-right"></span>Tissot</a></li>
+									<li><a href="#"> <span class="pull-right"></span>Breitling</a></li>
+									<li><a href="#"> <span class="pull-right"></span>Mont Blanc</a></li>
+									<li><a href="#"> <span class="pull-right"></span>Rolex</a></li>
+								</ul>
+							</div>
+						</div><!--/brands_products-->
+						
+						<div class="price-range"><!--price-range-->
+							<h2>Price Range</h2>
+							<div class="well text-center">
+								 <div style="width: 149px;" class="slider slider-horizontal"><div class="slider-track"><div style="left: 41.6667%; width: 33.3333%;" class="slider-selection"></div><div style="left: 41.6667%;" class="slider-handle round left-round"></div><div style="left: 75%;" class="slider-handle round"></div></div><div style="top: -30px; left: 53.9167px;" class="tooltip top"><div class="tooltip-arrow"></div><div class="tooltip-inner">250 : 450</div></div><input style="" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" type="text"></div><br>
+								 <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
+							</div>
+						</div><!--/price-range-->
+						
+						
+					
+					</div>
+				</div>
+				
+				<div class="col-sm-9 padding-right">
+					<div class="features_items"><!--features_items-->
+						<h2 class="title text-center">Features Items</h2>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+										<div class="productinfo text-center">
+											<img src="@ViewBag.x[0].picPath" alt="">
+											<h2>Rs @ViewBag.x[0].price</h2>
+											<p>@ViewBag.x[0].Name</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										</div>
+										<div class="product-overlay">
+											<div class="overlay-content">
+												<h2>@ViewBag.x[0].price</h2>
+											<p>@ViewBag.x[0].Name</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+										</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="@ViewBag.x[1].picPath" alt="">
+											<h2>Rs @ViewBag.x[1].price</h2>
+											<p>@ViewBag.x[1].Name</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>Rs @ViewBag.x[1].price</h2>
+											<p>@ViewBag.x[1].Name</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										</div>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="@ViewBag.x[2].picPath" alt="">
+											<h2>Rs @ViewBag.x[2].price</h2>
+											<p>@ViewBag.x[2].Name</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>Rs @ViewBag.x[2].price</h2>
+											<p>@ViewBag.x[2].Name</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										</div>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="@ViewBag.x[3].picPath" alt="">
+											<h2>Rs @ViewBag.x[3].price</h2>
+											<p>@ViewBag.x[3].Name</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>Rs @ViewBag.x[3].price</h2>
+											<p>@ViewBag.x[3].Name</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										</div>
+									</div>
+									<img src="images/home/new.png" class="new" alt="">
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="@ViewBag.x[4].picPath" alt="">
+											<h2>Rs @ViewBag.x[4].price</h2>
+											<p>@ViewBag.x[4].Name</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>Rs @ViewBag.x[4].price</h2>
+											<p>@ViewBag.x[4].Name</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										</div>
+									</div>
+									<img src="images/home/sale.png" class="new" alt="">
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="@ViewBag.x[5].picPath" alt="">
+											<h2>Rs @ViewBag.x[5].price</h2>
+											<p>@ViewBag.x[5].Name</p>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+									</div>
+									<div class="product-overlay">
+										<div class="overlay-content">
+											<h2>Rs @ViewBag.x[5].price</h2>
+											<p>@ViewBag.x[5].Name</p>
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										</div>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+					</div><!--features_items-->
+					
+					
+					
+				</div>
+			</div>
+		</div>
+ 
+
+
+        </body>
+    </html>

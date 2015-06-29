@@ -1,0 +1,20 @@
+﻿@model theWatchShop.Models.product
+
+@{
+    ViewBag.Title = "addProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add Product Menu</h2>
+<br />
+<br />
+
+
+<form method="post" action="/admin/save" enctype="multipart/form-data" >
+Product ID : @Html.TextBoxFor(m => m.productID) <br />
+Model : @Html.TextBoxFor(m => m.Name) <br />
+Brand : @Html.TextBoxFor(m => m.brand) <br />
+Price : @Html.TextBoxFor(m => m.price) <br />
+Picture : <input type="file" name="f1" />
+<input type="submit" value="Save" />
+</form>

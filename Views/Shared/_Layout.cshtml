@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/bootstrapcss")
+
+</head>
+<body>
+   <nav class="navbar navbar-inverse" role="navigation" >
+            <div class="navbar-header" >
+                <a class="navbar-brand" href="#">The Watch Shop</a>
+            </div>
+       <div >
+           <ul class="nav navbar-nav" >
+               <li>@Html.ActionLink("Home","Index","Home")</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               <li>@Html.ActionLink("About Us","About","Home")</li>
+               <li>@Html.ActionLink("Contact Us","Contact","Home")</li>
+               <li>@Html.ActionLink("Admin Login","Index","Admin")</li>
+               <li>@Html.ActionLink("View All","viewAll","Home")</li>
+               <li>@Html.ActionLink("Checkout","checkOut","Home")</li>
+               <li>@Html.ActionLink("Search","search","Home")</li>
+
+           </ul>
+       </div>
+        </nav>
+
+ @RenderSection("featured", required: false)
+
+ @RenderBody()
+
+ @Scripts.Render("~/bundles/jquery")
+ @Scripts.Render("~/bundles/bootstrapjs")
+</body>
+</html>

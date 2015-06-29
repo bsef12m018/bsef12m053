@@ -1,0 +1,101 @@
+﻿@model theWatchShop.Models.product
+
+@{
+    ViewBag.Title = "viewAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section featured {
+    <section class="featured">
+        <script src="/Scripts/JQuery.js"></script>
+        <script src="/Scripts/Bootstrap.js"></script>
+        <link href="/Content/themes/base/bootstrap.css" rel="stylesheet" />
+
+    </section>
+
+}
+
+
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/prettyPhoto.css" rel="stylesheet">
+    <link href="~/Content/price-range.css" rel="stylesheet">
+    <link href="~/Content/animate.css" rel="stylesheet">
+	<link href="~/Content/main.css" rel="stylesheet">
+	<link href="~/Content/responsive.css" rel="stylesheet">
+    
+    <script>
+        
+        /*
+        $(document).ready(f2);
+
+        function f2()
+        {
+            $("a").click(function (event) {
+                
+                var myId = $(this).attr('id');
+
+                
+                $.getJSON("/Home/addToCart?id="+myId , function (x) {  alert(x);})
+
+
+                //alert(myId);
+            })
+        }
+
+        /*
+        function f1(event)
+        {
+            alert(event.target.id);
+        }
+        */
+    </script>
+
+</head>
+
+<body>
+   
+    <div id="p1"></div>
+
+    <div class="col-sm-9 padding-right">
+					<div class="features_items"><!--features_items-->
+    <div class="col-sm-4">
+      
+        @foreach( var p in ViewBag.x) 
+        {    
+<div class="product-image-wrapper">
+								<div class="single-products">
+										<div class="productinfo text-center">
+											<img src="~/@p.picPath" alt="">
+											<h2>Rs @p.price</h2>
+											<p>@p.Name</p>
+											
+										</div>
+										<div class="product-overlay">
+											<div class="overlay-content">
+												<h2>@p.price</h2>
+											<p>@p.Name</p>
+												<a href="/Home/addToCart/@p.productID"  class="btn btn-default add-to-cart"  id="@p.productID" ><i class="fa fa-shopping-cart"  ></i>Add to cart</a>
+											</div>
+										</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+									</ul>
+								</div>
+							</div>
+            }
+        </div>
+                        </div>
+        </div>
+    </body>
+    </html>

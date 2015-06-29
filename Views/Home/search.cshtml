@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "search";
+}
+
+
+@section featured {
+    <section class="featured">
+        <script src="/Scripts/JQuery.js"></script>
+        <script src="/Scripts/Bootstrap.js"></script>
+        <link href="/Content/themes/base/bootstrap.css" rel="stylesheet" />
+
+    </section>
+
+}
+
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/prettyPhoto.css" rel="stylesheet">
+    <link href="~/Content/price-range.css" rel="stylesheet">
+    <link href="~/Content/animate.css" rel="stylesheet">
+	<link href="~/Content/main.css" rel="stylesheet">
+	<link href="~/Content/responsive.css" rel="stylesheet">
+    
+
+    <script>
+
+        $(document).ready(f1);
+
+        function f1()
+        {
+            $('#b1').on('click', f2);
+
+        }
+
+        function f2()
+        {
+            var x = $("#t1").val();
+            $.getJSON("/Home/searchProduct?name=" + x, function (data) {
+                if (data.Name == "NULLNAME")
+                {
+                    $("#srch1").append("<p>Not Found</p>");
+                }
+                else
+                {
+                    
+                        $("#srch1").append("<p>" + data.Name + "</p>");
+
+                   
+                }
+            });
+        }
+
+    </script>
+
+</head>
+    <body>
+
+<input type="text" id="t1" />
+<input type="button" id="b1" value="Search" />
+
+<div id="srch1"></div>
+
+
+        </body>
+    </html>

@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "adminMenu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section featured {
+    <section class="featured">
+        <script src="/Scripts/JQuery.js"></script>
+        <script src="/Scripts/Bootstrap.js"></script>
+        <link href="/Content/themes/base/bootstrap.css" rel="stylesheet" />
+
+    </section>
+
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/prettyPhoto.css" rel="stylesheet">
+    <link href="~/Content/price-range.css" rel="stylesheet">
+    <link href="~/Content/animate.css" rel="stylesheet">
+	<link href="~/Content/main.css" rel="stylesheet">
+	<link href="~/Content/responsive.css" rel="stylesheet">
+    
+</head>
+
+
+<p class = "tpbutton btn-toolbar" style="text-align:center">
+     <a class = "btn navbar-btn btn-primary" href = "@Url.Action("addProduct", "Admin")" " >Add Products</a><br />
+     <a class = "btn navbar-btn btn-default" href = "@Url.Action("Index", "Home")" " >Logout</a>
+</p>

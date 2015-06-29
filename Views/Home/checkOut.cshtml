@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "checkOut";
+}
+
+@if (ViewBag.found == "Empty")
+{
+    <p>Empty Cart</p>
+}
+
+<table>
+@if (ViewBag.found != "Empty")
+{
+    foreach (var x in ViewBag.x)
+    {
+        <tr>
+            <td> @x </td>
+        </tr>
+    }
+}
+</table>
